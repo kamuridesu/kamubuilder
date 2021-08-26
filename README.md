@@ -9,7 +9,7 @@ Can be used with VIM, NEOVIM or Sublime Text 3. The implementation on those edit
 We also have the args parameter, that can be passed to any compiler or interpreter like:
 cLang(path, filename, [-lm])
 
-## Current supported languages
+## Currently supported languages
   - Python
   - PHP
   - JavaScript (NodeJs, npm support soon i think)
