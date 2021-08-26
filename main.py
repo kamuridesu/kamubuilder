@@ -22,6 +22,7 @@ from java import java
 from py import python
 from rs import rust, rsCargo
 from php import php
+from js import js
 
 
 def main(args):
@@ -46,6 +47,8 @@ def main(args):
             java(path, filename)
         if extension == "php":
             php(path, filename)
+        if extension == "js":
+            js(path, filename)
 
 
 if __name__ == "__main__":
