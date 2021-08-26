@@ -1,6 +1,5 @@
 # kamubuilder
 
-
 This is a parser for build for differents languages.
 
 Can be used with VIM, NEOVIM or Sublime Text 3. The implementation on those editors are: run the file and pass the filename as argument, for example, in VIM/NEOVIM:
@@ -11,13 +10,13 @@ We also have the args parameter, that can be passed to any compiler or interpret
 cLang(path, filename, [-lm])
 
 ## Current supported languages
-- Python
-- PHP
-- JavaScript (NodeJs, npm support soon i think)
-- Java
-- C
-- C++
-- Rust (with Cargo support)
+  - Python
+  - PHP
+  - JavaScript (NodeJs, npm support soon i think)
+  - Java
+  - C
+  - C++
+  - Rust (with Cargo support)
 
 If you want to contribute and add support to more languages, feel free to do pull requests.
 
