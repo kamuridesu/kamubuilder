@@ -10,13 +10,13 @@ We also have the args parameter, that can be passed to any compiler or interpret
 cLang(path, filename, "-lm")
 
 ## Currently supported languages
-  - Python
-  - PHP
-  - JavaScript (NodeJs, npm support soon i think)
-  - Java
-  - C
-  - C++
-  - Rust (with Cargo support)
+- Python
+- PHP
+- JavaScript (NodeJs, npm support soon i think)
+- Java
+- C
+- C++
+- Rust (with Cargo support)
 
 If you want to contribute and add support to more languages, feel free to do pull requests.
 
