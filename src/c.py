@@ -17,7 +17,7 @@ def getIncludes(filename):
     return linkers
 
 
-def cLang(path, filename, args=[]):
+def cLang(path, filename, *args):
     linkers = getIncludes(filename)
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")

@@ -3,7 +3,7 @@ import os
 from parser import popen
 import pathlib
 
-def rust(path, filename, args=[]):
+def rust(path, filename, *args):
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")
     file_basename = "".join(file_basename[:len(file_basename) - 1])

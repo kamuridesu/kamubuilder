@@ -6,13 +6,11 @@
 # map <F2> :w <CR>:!python ~/Documents/Programming/build/parser.py %<CR>
 # We also have the args parameter, that can be passed to any compiler or interpreter like:
 # cLang(path, filename, [-lm])
-
 # i've decided to separate each function to a file in case we want to add additional processing
-# like creating a c specific function that searches for includes and chooses what to link, eg, if 
+# like creating a c specific function that searches for includes and chooses what to link, eg, if
 # math is in include, we automatically use the -lm.
 
 import sys
-import os
 import pathlib
 
 # Our processors

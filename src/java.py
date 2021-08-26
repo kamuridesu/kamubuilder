@@ -3,7 +3,7 @@ import subprocess
 import os
 
 
-def java(path, filename, args=[]):
+def java(path, filename, *args):
     # basename for the class execution
     file_basename = os.path.basename(filename)  # we need to get basename with basename() function
     # as the full path of the file can be also passed if you're using sublime text
