@@ -16,13 +16,13 @@ import os
 import pathlib
 
 # Our processors
-from c import cLang
-from cpp import cppLang
-from java import java
-from py import python
-from rs import rust, rsCargo
-from php import php
-from js import js
+from src.c import cLang
+from src.cpp import cppLang
+from src.java import java
+from src.py import python
+from src.rs import rust, rsCargo
+from src.php import php
+from src.js import js
 
 
 def main(args):
