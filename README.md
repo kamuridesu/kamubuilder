@@ -7,7 +7,7 @@ Can be used with VIM, NEOVIM or Sublime Text 3. The implementation on those edit
     map <F2> :w <CR>:!python ~/.main.py %<CR>
 
 We also have the args parameter, that can be passed to any compiler or interpreter like:
-cLang(path, filename, [-lm])
+cLang(path, filename, "-lm")
 
 ## Currently supported languages
   - Python
