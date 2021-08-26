@@ -3,7 +3,7 @@ import os
 from parser import popen
 import pathlib
 
-def rust(path, filename, *args):
+def rust(path: str, filename: str, *args) -> int:
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")
     file_basename = "".join(file_basename[:len(file_basename) - 1])
@@ -16,7 +16,7 @@ def rust(path, filename, *args):
         return popen(targ_path)
 
 
-def rsCargo(path, filename, args=[]):
+def rsCargo(path: str, filename: str, *args) -> bool:
     parent_path = str(pathlib.Path(path).parent.absolute())
     files_in_parent = os.listdir(parent_path)
     if "Cargo.toml" in files_in_parent:

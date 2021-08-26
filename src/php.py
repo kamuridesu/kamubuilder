@@ -1,5 +1,5 @@
 from parser import popen
 
 
-def php(path, filename, *args):
+def php(path: str, filename: str, *args) -> int:
     return popen("php", *args, filename)

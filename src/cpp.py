@@ -2,7 +2,7 @@ from parser import popen
 import os
 
 
-def cppLang(path, filename, *args):
+def cppLang(path: str, filename: str, *args) -> int:
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")
     file_basename = "".join(file_basename[:len(file_basename) - 1])

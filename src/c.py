@@ -2,7 +2,7 @@ from parser import popen
 import os
 
 
-def getIncludes(filename):
+def getIncludes(filename: str) -> list:
     content = []
     libraries = []
     with open(filename, "r") as file:
@@ -17,7 +17,7 @@ def getIncludes(filename):
     return linkers
 
 
-def cLang(path, filename, *args):
+def cLang(path: str, filename: str, *args) -> int:
     linkers = getIncludes(filename)
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")

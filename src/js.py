@@ -1,5 +1,5 @@
 from parser import popen
 
 
-def js(path, filename, *args):
+def js(path: str, filename: str, *args) -> int:
     return popen("node", *args, filename)

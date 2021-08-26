@@ -3,7 +3,7 @@ import subprocess
 from subprocess import PIPE
 
 
-def popen(*args):
+def popen(*args) -> int:
     # We use primarily subprocess.Popen as a way to execute and retrieve input
     p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out, err = p.communicate()

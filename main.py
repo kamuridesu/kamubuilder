@@ -23,7 +23,7 @@ from src.php import php
 from src.js import js
 
 
-def main(args):
+def main(args: list) -> None:
     filename = args[0]
     extension = filename.split(".")
     extension = extension[len(extension) - 1]
