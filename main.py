@@ -21,6 +21,7 @@ from src.py import python
 from src.rs import rust, rsCargo
 from src.php import php
 from src.js import js
+from src.shell import shell
 
 
 def main(args: list) -> None:
@@ -47,6 +48,8 @@ def main(args: list) -> None:
             php(path, filename)
         if extension == "js":
             js(path, filename)
+        if extension == "sh":
+            shell(path, filename)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,6 @@ import os
 
 
 def getIncludes(filename: str) -> list:
-    content = []
     libraries = []
     with open(filename, "r") as file:
         includes = [x.strip('\n') for x in file.readlines()]
