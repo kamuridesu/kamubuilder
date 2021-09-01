@@ -1,6 +1,6 @@
 import subprocess
 import os
-from parser import popen
+from src.parser import popen
 import pathlib
 
 def rust(path: str, filename: str, *args) -> int:

@@ -10,5 +10,8 @@ def popen(*args) -> int:
     if err:
         print(err.decode("utf-8"))
         return 1
+    if p.returncode != 0:
+        print(out.decode("utf-8"))
+        return p.returncode
     print(out.decode("utf-8"))
     return 0

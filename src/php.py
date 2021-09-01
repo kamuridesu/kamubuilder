@@ -1,4 +1,4 @@
-from parser import popen
+from src.parser import popen
 
 
 def php(path: str, filename: str, *args) -> int:
