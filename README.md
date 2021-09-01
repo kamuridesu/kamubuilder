@@ -18,6 +18,7 @@ cLang(path, filename, "-lm")
 - C++
 - Rust (with Cargo support)
 - Shell
+- Pascal
 
 If you want to contribute and add support to more languages, feel free to do pull requests.
 
