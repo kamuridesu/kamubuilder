@@ -22,6 +22,7 @@ from src.rs import rust, rsCargo
 from src.php import php
 from src.js import js
 from src.shell import shell
+from src.pascal import pascal
 
 
 def main(args: list) -> None:
@@ -50,6 +51,8 @@ def main(args: list) -> None:
             js(path, filename)
         if extension == "sh":
             shell(path, filename)
+        if extension == "pp" or extension == "pas":
+            pascal(path, filename)
 
 
 if __name__ == "__main__":
