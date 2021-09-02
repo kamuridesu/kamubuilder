@@ -26,6 +26,6 @@ If you want to contribute and add support to more languages, feel free to do pul
 I've decided to separate each function to a file in case we want to add additional processing like creating a C specific function that searches for includes and chooses what libraries to link, eg, if math is in include, we automatically use the `-lm` (this is already implemented, so we automatically search for the header files and include the libraries needed for the linker).
 
 ### Info on Rust builder
-If you add `// rust` to the first line of your rust file, it is going to be compiled with `rustc` even if it is on a Cargo project. I've made this because one can choose to test their code without compile the whole project.
+If you add `// rust` to the first line of your rust file, it is going to be compiled with `rustc` even if it is on a Cargo project. I've made this because one can choose to test their code without compiling the whole project.
 
 Other thing that you'll need to be aware is that if the compiler returns a warning, it is going to be treated as an error by the parser. I do not plan to change this behavior at the moment because it forces you to correct (or at least suppress) the warnings.
