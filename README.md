@@ -17,7 +17,7 @@ We also have the args parameter, that can be passed to any compiler or interpret
 - C (using GCC)
 - C++ (using G++)
 - Rust (using rustc with Cargo support)
-- Shell (using sh shell)
+- Shell (using Bourne shell, sh)
 - Pascal (using FPC)
 
 If you want to contribute and add support to more languages, feel free to do pull requests.
