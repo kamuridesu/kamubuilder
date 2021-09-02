@@ -23,7 +23,6 @@ def rust(path: str, filename: str, *args) -> int:
     # compile
     if popen("rustc", "-o", targ_path, *args, filename) == 0:
         # run
-        print("runnnig")
         return popen(targ_path)
 
 
