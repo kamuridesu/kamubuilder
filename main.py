@@ -23,6 +23,7 @@ from src.php import php
 from src.js import js
 from src.shell import shell
 from src.pascal import pascal
+from src.julia import julia
 
 
 def main(args: list) -> None:
@@ -53,6 +54,8 @@ def main(args: list) -> None:
             shell(path, filename)
         if extension == "pp" or extension == "pas":
             pascal(path, filename)
+        if extension == "jl":
+            julia(path, filename)
 
 
 if __name__ == "__main__":
