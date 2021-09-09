@@ -24,6 +24,7 @@ from src.js import js
 from src.shell import shell
 from src.pascal import pascal
 from src.julia import julia
+from src.go import go
 
 
 def main(args: list) -> None:
@@ -56,6 +57,8 @@ def main(args: list) -> None:
             pascal(path, filename)
         if extension == "jl":
             julia(path, filename)
+        if extension == "go":
+            go(path, filename)
 
 
 if __name__ == "__main__":
