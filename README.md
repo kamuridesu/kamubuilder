@@ -20,6 +20,7 @@ We also have the args parameter, that can be passed to any compiler or interpret
 - Shell (using Bourne shell, sh)
 - Pascal (using FPC)
 - Julia
+- Go (only run, maybe a hack for compiling soon)
 
 If you want to contribute and add support to more languages, feel free to do pull requests.
 
