@@ -1,5 +1,9 @@
 from src.parser import popen
+from src.checkDistro import checkDistro
 
 
 def python(path: str, filename: str, *args) -> int:
-    return popen("python", *args, filename)
+    cmd = "python"
+    if checkDistro("apt-get") or checkDistro("apt"):
+        cmd = "python3"
+    return popen(cmd, *args, filename)
