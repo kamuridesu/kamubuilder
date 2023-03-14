@@ -14,7 +14,20 @@ import sys
 import pathlib
 
 # Our processors
-from src import cLang, cppLang, java, python, rust, rsCargo, php, js, shell, pascal, julia, go
+from src import (
+    cLang,
+    cppLang,
+    java,
+    python,
+    rust,
+    rsCargo,
+    php,
+    js,
+    shell,
+    pascal,
+    julia,
+    go,
+)
 
 
 def main(args: list) -> None:
@@ -35,7 +48,7 @@ def main(args: list) -> None:
         "go": go,
         "jl": julia,
         "pp": pascal,
-        "pas": pascal
+        "pas": pascal,
     }
     if not is_cargo:
         builder = builders.get(extension)

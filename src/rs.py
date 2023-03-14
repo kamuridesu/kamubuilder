@@ -6,7 +6,7 @@ import pathlib
 
 def checkRunAsRustc(file):
     with open(file, "r", encoding="utf-8") as f:
-       lines = [x.strip('\n') for x in f.readlines()]
+        lines = [x.strip("\n") for x in f.readlines()]
     if len(lines) > 1:
         if lines[0] == "// rustc":
             return True
@@ -16,7 +16,7 @@ def checkRunAsRustc(file):
 def rust(path: str, filename: str, *args) -> int:
     file_basename = os.path.basename(filename)
     file_basename = file_basename.split(".")
-    file_basename = "".join(file_basename[:len(file_basename) - 1])
+    file_basename = "".join(file_basename[: len(file_basename) - 1])
     if file_basename[0] == "/" or file_basename[0] == "\\":
         file_basename = file_basename[1:]
     targ_path = os.path.join(path, file_basename)

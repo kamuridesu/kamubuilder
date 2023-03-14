@@ -10,4 +10,16 @@ from .pascal import pascal
 from .julia import julia
 from .go import go
 
-__all__ = ["cLang", "cppLang", "java", "python", "rust, rsCargo", "php", "js", "shell", "pascal", "julia", "go",]
+__all__ = [
+    "cLang",
+    "cppLang",
+    "java",
+    "python",
+    "rust, rsCargo",
+    "php",
+    "js",
+    "shell",
+    "pascal",
+    "julia",
+    "go",
+]

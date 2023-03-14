@@ -2,7 +2,9 @@ import subprocess as sp
 
 
 def checkDistro(distro_manager):
-    p = sp.Popen(["which", distro_manager], stdout=sp.PIPE, stdin=sp.PIPE, stderr=sp.PIPE)
+    p = sp.Popen(
+        ["which", distro_manager], stdout=sp.PIPE, stdin=sp.PIPE, stderr=sp.PIPE
+    )
     p.communicate()
     return p.returncode == 0
 
