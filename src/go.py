@@ -1,4 +1,4 @@
-from src.parser import popen
+from src.parsers import popen
 
 
 def go(path: str, filename: str, *args) -> int:

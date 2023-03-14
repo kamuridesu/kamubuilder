@@ -3,7 +3,7 @@
 # The implementation on those editors are:
 # run the file and pass the filename as argument
 # for example, in VIM/NEOVIM:
-# map <F2> :w <CR>:!python ~/Documents/Programming/build/parser.py %<CR>
+# map <F2> :w <CR>:!python3 ~/.config/kamubuilder/main.py %<CR>
 # We also have the args parameter, that can be passed to any compiler or interpreter like:
 # cLang(path, filename, [-lm])
 # i've decided to separate each function to a file in case we want to add additional processing
@@ -14,17 +14,7 @@ import sys
 import pathlib
 
 # Our processors
-from src.c import cLang
-from src.cpp import cppLang
-from src.java import java
-from src.py import python
-from src.rs import rust, rsCargo
-from src.php import php
-from src.js import js
-from src.shell import shell
-from src.pascal import pascal
-from src.julia import julia
-from src.go import go
+from src import cLang, cppLang, java, python, rust, rsCargo, php, js, shell, pascal, julia, go
 
 
 def main(args: list) -> None:
@@ -32,33 +22,26 @@ def main(args: list) -> None:
     extension = filename.split(".")
     extension = extension[len(extension) - 1]
     path = str(pathlib.Path(filename).parent.absolute())
-    # print(filename)
-    # print(extension)
-    # print(path)
     is_cargo = rsCargo(path, filename)
+    builders = {
+        "py": python,
+        "rs": rust,
+        "c": cLang,
+        "cpp": cppLang,
+        "java": java,
+        "php": php,
+        "js": js,
+        "sh": shell,
+        "go": go,
+        "jl": julia,
+        "pp": pascal,
+        "pas": pascal
+    }
     if not is_cargo:
-        if extension == "py":
-            python(path, filename)
-        if extension == "rs":
-            rust(path, filename)
-        if extension == "c":
-            cLang(path, filename)
-        if extension == "cpp":
-            cppLang(path, filename)
-        if extension == "java":
-            java(path, filename)
-        if extension == "php":
-            php(path, filename)
-        if extension == "js":
-            js(path, filename)
-        if extension == "sh":
-            shell(path, filename)
-        if extension == "pp" or extension == "pas":
-            pascal(path, filename)
-        if extension == "jl":
-            julia(path, filename)
-        if extension == "go":
-            go(path, filename)
+        builder = builders.get(extension)
+        if builder:
+            return builder(path, filename)
+        raise Exception("Language not recognized or not supported!")
 
 
 if __name__ == "__main__":

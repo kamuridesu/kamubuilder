@@ -1,4 +1,4 @@
-from src.parser import popen
+from src.parsers import popen
 
 
 def js(path: str, filename: str, *args) -> int:

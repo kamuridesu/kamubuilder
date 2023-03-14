@@ -1,4 +1,4 @@
-from src.parser import popen
+from src.parsers import popen
 import os
 
 

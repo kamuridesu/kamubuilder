@@ -6,6 +6,7 @@ def checkDistro(distro_manager):
     p.communicate()
     return p.returncode == 0
 
+
 def getPackageManager():
     if checkDistro("apt-get"):
         return "apt-get"
